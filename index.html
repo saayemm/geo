@@ -15,8 +15,10 @@
         <!-- main content container -->
         <div class="flex flex-col md:flex-row">
             <!-- Shape Container -->
-            <div class="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-                <!-- Triangle -->
+            <div class="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+              
+              <!-- Triangle -->
                 <div class="card bg-base-100 w-96 shadow-xl">
                     <figure>
                       <img
@@ -43,48 +45,84 @@
                     </div>
                   </div>
 
-                <!-- <div class="card bg-base-100 w-96 shadow-xl">
-                    <figure>
-                      <img
-                        src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                        alt="Shoes" />
-                    </figure>
-                    <div class="card-body">
-                      <h2 class="card-title">Shoes!</h2>
-                      <p>If a dog chews shoes whose shoes does he choose?</p>
-                      <div class="card-actions justify-end">
-                        <button class="btn btn-primary">Buy Now</button>
-                      </div>
-                    </div>
-                  </div>
+                  <!-- Ractangle -->
                 <div class="card bg-base-100 w-96 shadow-xl">
                     <figure>
                       <img
-                        src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                        src="images/rectangle.png"
                         alt="Shoes" />
                     </figure>
                     <div class="card-body">
-                      <h2 class="card-title">Shoes!</h2>
-                      <p>If a dog chews shoes whose shoes does he choose?</p>
-                      <div class="card-actions justify-end">
-                        <button class="btn btn-primary">Buy Now</button>
+                      <h2 class="card-title">Ractangle</h2>
+                      <p class="text-center">Area(A) = h X w</p>
+                      <div>
+                        <input id="rec-wide" class="w-24 h-10 text-2xl p-2 rounded-sm border-2 border-slate-500" type="text" placeholder="w">
+                      <span>cm</span>
+                      <input id="rec-height" class="w-24 h-10 text-2xl p-2 rounded-sm border-2 border-slate-500" type="text" placeholder="h">
+                      <span>cm</span>
+                      </div>
+                      <div>
+                        <p class="text-2xl">Area <span id="rec-area"></span> <span>cm</span> <sup>2</sup></p>
+                      </div>
+
+                      <div class="card-actions">
+                        <button onclick="calculateRectangleArea()" class="btn btn-primary w-full">Calculate</button>
                       </div>
                     </div>
                   </div>
+
+                  <!-- pentagon -->
                 <div class="card bg-base-100 w-96 shadow-xl">
                     <figure>
                       <img
-                        src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                        src="images/pentagon.png"
                         alt="Shoes" />
                     </figure>
                     <div class="card-body">
-                      <h2 class="card-title">Shoes!</h2>
-                      <p>If a dog chews shoes whose shoes does he choose?</p>
-                      <div class="card-actions justify-end">
-                        <button class="btn btn-primary">Buy Now</button>
+                      <h2 class="card-title">Pentagon</h2>
+                      <p class="text-center">Area(A) = 0.5 X p X a</p>
+                      <div>
+                        <input id="pen-peri" class="w-24 h-10 text-2xl p-2 rounded-sm border-2 border-slate-500" type="text" placeholder="p">
+                      <span>cm</span>
+                      <input id="pen-side" class="w-24 h-10 text-2xl p-2 rounded-sm border-2 border-slate-500" type="text" placeholder="a">
+                      <span>cm</span>
+                      </div>
+                      <div>
+                        <p class="text-2xl">Area <span id="pen-area"></span> <span>cm</span> <sup>2</sup></p>
+                      </div>
+
+                      <div class="card-actions">
+                        <button onclick="calculatePentaArea()" class="btn btn-primary w-full">Buy Now</button>
                       </div>
                     </div>
-                  </div> -->
+                  </div>
+
+                  <!-- elips -->
+                <div class="card bg-base-100 w-96 shadow-xl">
+                    <figure>
+                      <img
+                        src="images/ellipse.png"
+                        alt="Shoes" />
+                    </figure>
+                    <div class="card-body">
+                      <h2 class="card-title">Ellipse</h2>
+                      <p class="text-center">Area(A) = &pi; X a X b</p>
+
+                      <div>
+                        <input id="elips-peri" class="w-24 h-10 text-2xl p-2 rounded-sm border-2 border-slate-500" type="text" placeholder="a">
+                      <span>cm</span>
+                      <input id="elips-side" class="w-24 h-10 text-2xl p-2 rounded-sm border-2 border-slate-500" type="text" placeholder="b">
+                      <span>cm</span>
+                      </div>
+                      <div>
+                        <p class="text-2xl">Area <span id="elips-area"></span> <span>cm</span> <sup>2</sup></p>
+                      </div>
+
+                      <div class="card-actions">
+                        <button onclick="ellipsAreaCal()" class="btn btn-primary w-full">Calculate</button>
+                      </div>
+                    </div>
+                  </div>
             </div>
 
             <!-- Area calculation Container -->
